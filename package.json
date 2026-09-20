@@ -1,0 +1,16 @@
+{
+  "name": "avox-hello-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+"start": "node app.js",
+"test": "echo \"No automated tests configured yet\" && exit 0"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
