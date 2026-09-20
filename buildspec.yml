@@ -1,0 +1,32 @@
+# buildspec.yml
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo "Installing dependencies..."
+      - npm install
+
+  pre_build:
+    commands:
+      - echo "Running tests..."
+      - npm test
+
+  build:
+    commands:
+      - echo "Build started on `date`"
+      - echo "Nothing to compile for a plain Node.js app - packaging files as-is"
+
+  post_build:
+    commands:
+      - echo "Build completed on `date`"
+
+artifacts:
+  files:
+    - '**/*'
+  exclude-paths:
+    - '.git/**/*'
+    - 'node_modules/**/*'
+  name: avox-hello-app-build
